@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Иван Кобзарев](https://up.htmlacademy.ru/htmlcss/35/user/2209145).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
