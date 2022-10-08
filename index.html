@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -26,14 +27,14 @@
         </ul>
         <ul class="navigation-user-list">
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link navigation-link navigation-link-found" href="#">
               <span class="visually-hidden">
                 Поиск
               </span>
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link navigation-link" href="#">
               <span class="visually-hidden">
                 Избранное
                 <span class="navigation-user-like">
@@ -43,7 +44,9 @@
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">Хочу сюда!</a>
+            <span class="button-section-want">
+            <a class="navigation-user-link navigation-want-link" href="#">Хочу сюда!</a>
+            </span>
           </li>
         </ul>
       </nav>
@@ -51,10 +54,13 @@
 
 <main class="main-index">
   <h1 class="visually-hidden">Великолепный город Седона</h1>
-  <img class="logo" src="images/main-index/head-welcome.svg" width="458" height="352"  alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks.">
-  <h2 class="main-header">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2> <!-- Дальше идет поясненние почему именно Седона достойна большего, значит это резюме (заголовок, а не содержание) -->
-  <p class="main-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-
+  <section class="main-index-logo">
+    <img class="logo" src="images/main-index/head-welcome.svg" width="1200" height="485"  alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks.">
+  </section>
+  <section class="main-title-sedona">
+    <h2 class="main-header">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2> <!-- Дальше идет поясненние почему именно Седона достойна большего, значит это резюме (заголовок, а не содержание) -->
+    <p class="main-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+  </section>
   <section class="advantages">
     <h2 class="visually-hidden">Преимущества</h2>
     <ul class="advantages-list">
@@ -104,15 +110,15 @@
   <section class="hotel-search">
     <h2 class="hotel-search-header">Заинтересовались?</h2>
     <p class="hotel-search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    <a class="button" href="#">Поиск гостиницы в Седоне</a>
+    <a class="button main-button-found" href="#">Поиск гостиницы в Седоне</a>
   </section>
-  <section class="email-follow">
+  <section class="email-follow-background">
     <h2 class="email-header">Подпишитесь на рассылку</h2>
     <p class="email-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="email-form"  action="https://echo.htmlacademy.ru/" method="post">
       <label for="shown-email" class="visually-hidden">Введите ваш почтовый адрес</label>
       <input type="email" id="shown-email" name="user-email" placeholder="Ваш E-mail">
-      <button class="button" type="submit">Подписаться</button>
+      <button class="button main-button" type="submit">Подписаться</button>
     </form>
   </section>
 </main>
@@ -128,7 +134,7 @@
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button" href="https://t.me/htmlacademy">
+          <a class="button-vk" href="https://t.me/htmlacademy">
             <span class="visually-hidden">
               Телеграм
             </span>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="page-header">
@@ -25,21 +26,21 @@
     </ul>
     <ul class="navigation-user-list">
       <li class="navigation-user-item">
-        <a class="navigation-user-link" href="#">
+        <a class="navigation-user-link  navigation-link" href="#">
           <span class="visually-hidden">
             Поиск
           </span>
         </a>
       </li>
       <li class="navigation-user-item">
-        <a class="navigation-user-link" href="#">
+        <a class="navigation-user-link  navigation-link" href="#">
           <span class="visually-hidden">
             Избранное
           </span>
         </a>
       </li>
       <li class="navigation-user-item">
-        <a class="navigation-user-link" href="#">Хочу сюда!</a>
+        <a class="navigation-user-link  navigation-want-link" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </nav>
@@ -60,8 +61,8 @@
       </ul>
     </section>
   <form action="https://echo.htmlacademy.ru" method="post">
-    <fieldset>
-      <legend>
+    <fieldset class="form-fieldset">
+      <legend class="legend-title">
         Инфраструктура:
       </legend>
       <p>
@@ -77,8 +78,8 @@
         <label class="wi-fi-id-connect" for="wi-fi-id">Wi-Fi</label>
       </p>
     </fieldset>
-    <fieldset>
-      <legend>
+    <fieldset class="form-fieldset">
+      <legend class="legend-title">
         Тип Жилья:
       </legend>
       <p>
@@ -94,8 +95,8 @@
         <label class="apartment-id-connect" for="apartment-id">Апартаменты</label>
       </p>
     </fieldset>
-    <fieldset>
-      <legend>
+    <fieldset class="form-fieldset-cost">
+      <legend class="legend-title">
         Стоимость,<span>₽</span>
       </legend>
       <div class="output-cost">
@@ -107,10 +108,10 @@
       </div>
     </fieldset>
     <div class="buttons-submit buttons">
-      <input type="submit" value="Забронировать">
+      <input type="submit" class="submit-button" value="Применить">
     </div>
     <div class="buttons-reset buttons">
-      <input type="reset" value="Сбросить">
+      <input type="reset" class="reset-button" value="Сбросить">
     </div>
   </form>
   </section>
@@ -150,12 +151,12 @@
         </a>
         <span class="hotel-type">Гостиница</span>
         <span class="hotel-type">От 4000 ₽</span>
-        <a class="hotel-info-button" href="#">Подробнее</a>
-        <a class="hotel-like-button" href="#">В избранное</a>
+        <a class="hotel-info-button buttons-hotel" href="#">Подробнее</a>
+        <a class="hotel-like-button buttons-hotel" href="#">В избранное</a>
         <p class="hotels-stars hotels-stars-4">
-          <span class="visually-hidden">4 звезды</span>
+          <span class="visually-hidden buttons-hotel">4 звезды</span>
         </p>
-        <span class="hotel-rating">Рейтинг:8,5</span>
+        <span class="hotel-rating buttons">Рейтинг:8,5</span>
       </li>
       <li class="hotel-card">
         <a class="hotel-card-link" href="#">
@@ -164,12 +165,12 @@
         </a>
         <span class="hotel-type">Гостиница</span>
         <span class="hotel-type">От 5000 ₽</span>
-        <a class="hotel-info-button" href="#">Подробнее</a>
-        <a class="hotel-like-button" href="#">В избранное</a>
+        <a class="hotel-info-button buttons-hotel" href="#">Подробнее</a>
+        <a class="hotel-like-button buttons-hotel" href="#">В избранное</a>
         <p class="hotels-stars hotels-stars-4">
-          <span class="visually-hidden">4 звезды</span>
+          <span class="visually-hidden buttons-hotel">4 звезды</span>
         </p>
-        <span class="hotel-rating">Рейтинг:9,2</span>
+        <span class="hotel-rating buttons-hotel">Рейтинг:9,2</span>
       </li>
       <li class="hotel-card">
         <a class="hotel-card-link" href="">
@@ -178,12 +179,12 @@
         </a>
         <span class="hotel-type">Гостиница</span>
         <span class="hotel-type">От 2500 ₽</span>
-        <a class="hotel-info-button" href="#">Подробнее</a>
-        <a class="hotel-like-button" href="#">В избранное</a>
+        <a class="hotel-info-button buttons-hotel" href="#">Подробнее</a>
+        <a class="hotel-like-button buttons-hotel" href="#">В избранное</a>
         <p class="hotels-stars hotels-stars-3">
-          <span class="visually-hidden">3 звезды</span>
+          <span class="visually-hidden buttons-hotel">3 звезды</span>
         </p>
-        <span class="hotel-rating">Рейтинг:6,9</span>
+        <span class="hotel-rating buttons">Рейтинг:6,9</span>
       </li>
       <li class="hotel-card">
         <a class="hotel-card-link" href="#">
@@ -192,12 +193,12 @@
         </a>
         <span class="hotel-type">Гостиница</span>
         <span class="hotel-type">От 1500 ₽</span>
-        <a class="hotel-info-button" href="#">Подробнее</a>
-        <a class="hotel-like-button" href="#">В избранное</a>
+        <a class="hotel-info-button buttons-hotel" href="#">Подробнее</a>
+        <a class="hotel-like-button buttons-hotel" href="#">В избранное</a>
         <p class="hotels-stars hotels-stars-2">
-          <span class="visually-hidden">2 звезды</span>
+          <span class="visually-hidden buttons-hotel">2 звезды</span>
         </p>
-        <span class="hotel-rating">Рейтинг:5,0</span>
+        <span class="hotel-rating buttons-hotel">Рейтинг:5,0</span>
       </li>
     </ul>
   </section>
@@ -215,7 +216,7 @@
       <a class="pagination-link" href="#">4</a>
     </li>
     <li class="pagination-item">
-      <div class="pagination-link">...</div>
+      <div class="pagination-ect">...</div>
     </li>
     <li class="pagination-item">
       <a class="pagination-link" href="#">10</a>
@@ -228,7 +229,7 @@
     <form class="email-form"  action="https://echo.htmlacademy.ru/" method="get">
       <label for="shown-email"></label>
       <input type="email" id="shown-email" name="user-email" placeholder="Ваш E-mail">
-      <button class="button" type="submit" >Подписаться</button>
+      <button class="button main-button" type="submit" >Подписаться</button>
     </form>
   </section>
 </main>
@@ -238,21 +239,21 @@
     <ul class="footer-social-list">
       <li class="footer-social-item">
         <a class="button" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">
+            <span class="visually-hidden">
               Вконтакте
             </span>
         </a>
       </li>
       <li class="footer-social-item">
         <a class="button" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">
+            <span class="visually-hidden">
               Телеграм
             </span>
         </a>
       </li>
       <li class="footer-social-item">
         <a class="button" href="https://youtube.com/user/htmlacademy">
-          <span class="visually-hidden">
+            <span class="visually-hidden">
               Ютуб
             </span>
         </a>
@@ -266,9 +267,9 @@
   <section class="footer-html-link">
     <h2 class="footer-htmlacademy-link">
       <a class="visually-hidden" href="https://htmlacademy.ru">
-        <span class="visually-hidden">
+          <span class="visually-hidden">
               Перейти на сайт
-        </span>
+            </span>
       </a>
     </h2>
   </section>
