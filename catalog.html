@@ -72,7 +72,7 @@
           <a class="breadcrumbs-link">Гостиницы</a>
         </li>
       </ul>
-  <form action="https://echo.htmlacademy.ru" method="post">
+  <form class="form-all-header" action="https://echo.htmlacademy.ru" method="post">
     <fieldset class="form-fieldset">
       <legend class="legend-title">
         Инфраструктура:
@@ -119,12 +119,14 @@
         <output name="output"></output>
       </div>
     </fieldset>
-    <div class="buttons-submit buttons">
+    <ul class="ul-list">
+    <li class="buttons-submit">
       <input type="submit" class="submit-button" value="Применить">
-    </div>
-    <div class="buttons-reset buttons">
+    </li>
+    <li class="buttons-reset">
       <input type="reset" class="reset-button" value="Сбросить">
-    </div>
+    </li>
+    </ul>
   </form>
   </section>
 <section class="hotel-catalog">
@@ -137,7 +139,7 @@
     <option value="expensive">Сначала дорогие</option>
   </select>
     <ul class="sorting-list ul-list">
-      <li>
+      <li class="sorting-item">
         <span class="button-all-card-item">
         <a href="#" class="button-sorting-item button-all-card">
           <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +154,7 @@
         </a>
         </span>
       </li>
-      <li>
+      <li class="sorting-item">
         <a class="button-sorting-item button-card" href="#">
           <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 12H0V14H16V12Z" fill="black"/>
@@ -161,7 +163,7 @@
           <span class="visually-hidden">Показывать по одной карточке</span>
         </a>
       </li>
-      <li>
+      <li class="sorting-item">
         <a class="button-sorting-item button-all-item" href="#">
           <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 0H0V2H2V0Z" fill="black"/>
@@ -189,10 +191,12 @@
         <span class="hotel-type">Гостиница</span>
         <span class="hotel-type">От 4000 ₽</span>
         </p>
+        <div class="hotel-card-buttons">
         <a class="hotel-info-button buttons-hotel" href="#">Подробнее</a>
         <a class="hotel-like-button buttons-hotel" href="#">В избранное</a>
         <p class="hotels-stars hotels-stars-4">
           <span class="visually-hidden">4 звезды</span>
+        </div>
         </p>
         <span class="hotel-rating buttons-hotel">Рейтинг:8,5</span>
       </li>
@@ -279,7 +283,7 @@
 </section>
   <section class="email-follow">
     <h2 class="email-header">Подпишитесь на рассылку</h2>
-    <p class="email-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="email-description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
     <form class="email-form"  action="https://echo.htmlacademy.ru/" method="post">
       <label for="shown-email" class="visually-hidden">Введите ваш почтовый адрес</label>
       <input type="email" id="shown-email" name="user-email" placeholder="Ваш E-mail">

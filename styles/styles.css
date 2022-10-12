@@ -67,7 +67,6 @@ body {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .main-index-logo {
@@ -108,10 +107,6 @@ body {
   margin: 0;
   padding: 0;
   vertical-align: bottom;
-}
-
-.main-footer {
-  background-color: #ffffff;
 }
 
 .footer-social-list {
@@ -209,10 +204,6 @@ body {
   margin: 0;
 }
 
-.hotel-list {
-  margin: 40px 0;
-}
-
 .hotel-card {
   padding: 20px;
   margin-bottom: 20px;
@@ -286,7 +277,7 @@ body {
   color: #ffffff;
   background-color: #000000;
   background-image: url("../images/catalog/catalog-background.jpg");
-  background-size: 220%;
+  background-size: 130%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -294,6 +285,10 @@ body {
 .form-fieldset-answer {
   padding: 0 0 16px 0;
   margin: 0;
+}
+
+.form-fieldset {
+  margin: 0 0 20px 0;
 }
 
 .form-fieldset-answer-first {
@@ -347,6 +342,89 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 50px 0 0;
+}
+
+.navigation-list {
+  display: flex;
+  width: 399px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 150px 0 0;
+}
+
+.navigation-user-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 74px;
+}
+
+.main-footer {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 0 30px;
+  width: 150px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  padding: 10px;
+  margin: 0 0 0 60px;
+  justify-content: space-around;
+  width: 150px;
+}
+
+.form-all-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 0 15px;
+}
+
+.catalog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sorting-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotel-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  justify-content: space-between;
+}
+
+.card-paragraph {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  display: flex;
+}
+
+.footer-html-place {
+  margin: 0 50px 0 0;
 }
 
 .navigation-want-link {
@@ -445,13 +523,13 @@ h1 {
 
 .button-sorting-item {
   padding: 17px;
-  font-size: 16px;
-  line-height: 20px;
+  margin: 5px;
   border-radius: 4px
 }
 
 .button-all-card-item {
   border: 2px solid #000000;
+  border-radius: 4px;
 }
 
 .button-card {
