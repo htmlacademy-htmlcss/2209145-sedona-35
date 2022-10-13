@@ -87,13 +87,19 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 175px;
 }
 
 .advantages-description-image {
   margin: 0;
   padding: 0;
   vertical-align: bottom;
+}
+
+.advantages-description {
+  margin: 0 auto;
+  max-width: 230px;
 }
 
 .footer-social-list {
@@ -114,6 +120,7 @@ body {
   background-repeat: no-repeat;
   text-align: center;
   padding-top: 96px;
+
 }
 
 .email-follow {
@@ -125,13 +132,15 @@ body {
   text-align: center;
   padding-top: 96px;
   max-width: 470px;
+  margin: 0 auto;
 }
 
 .main-header {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 0;
+  max-width: 625px;
+  margin: 0 auto;
 }
 
 .main-description {
@@ -156,6 +165,7 @@ body {
 
 .advantages-item-blue {
   background: #82B3D3;
+  color: #ffffff;
 }
 
 .advantages-item-white {
@@ -253,8 +263,9 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 0 54px 0;
+  max-width: 480px;
 
 }
 
