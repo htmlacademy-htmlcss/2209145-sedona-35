@@ -15,6 +15,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -25,14 +28,14 @@ body {
   margin: 0 auto;
 }
 
-.main-index {
-  width: 1200px;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 .ul-list {
@@ -45,6 +48,10 @@ body {
   color: #000000;
   background:#ffffff;
   font-size: 20px;
+}
+
+.navigation-item {
+  display: flex;
 }
 
 .visually-hidden {
@@ -69,17 +76,20 @@ body {
   text-decoration: none;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .main-index-logo {
+  display: flex;
+  justify-content: center;
+  padding: 52px 374px 83px 371px;
   background-color: #f2f2f2;
   color: #000000;
   background-image: url("../images/main-index/head-mask.svg"), url("../images/main-index/sedona-background.jpg");
   background-position: center bottom, center;
-  background-size: 100% auto;
+  background-size: 100%, cover;
   background-repeat: no-repeat, no-repeat;
-}
-
-.logo {
-  padding: 52px 372px 82px 371px;
 }
 
 .advantages-title {
@@ -87,7 +97,7 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 auto 62px;
   max-width: 175px;
 }
 
@@ -100,10 +110,6 @@ body {
 .advantages-description {
   margin: 0 auto;
   max-width: 230px;
-}
-
-.footer-social-list {
-  background-color: #ffffff;
 }
 
 .pagination-link-button {
@@ -119,7 +125,7 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
-  padding-top: 96px;
+  padding: 96px 0;
 
 }
 
@@ -143,9 +149,14 @@ body {
   margin: 0 auto;
 }
 
+.navigation-logo {
+  margin: 0 28px 0 70px;
+}
+
 .main-description {
-  margin: 25px 0 0 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 660px;
 }
 
 .main-title-sedona{
@@ -158,9 +169,13 @@ body {
   height: 384px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   font-size: 18px;
   line-height: 21px;
+}
+
+.advantages-item-icon {
+  margin: 0 0 30px 0;
 }
 
 .advantages-item-blue {
@@ -178,7 +193,7 @@ body {
 
 .hotel-search {
   text-align: center;
-  padding: 96px 258px 104px 258px;
+  padding: 96px 0 104px 0;
   background-color: #ffffff;
 }
 
@@ -233,6 +248,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin-bottom: 25px;
 }
 
 .hotel-search-header {
@@ -241,12 +257,16 @@ body {
   font-size: 30px;
   line-height: 36px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .hotel-search-description {
-  padding: 20px 0 54px 0;
-  margin: 0;
+  margin: 0 0 54px 0;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
 }
 
 .email-header {
@@ -254,7 +274,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
   text-transform: uppercase;
 }
@@ -263,8 +283,7 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  margin: 0 auto;
-  padding: 20px 0 54px 0;
+  margin: 0 auto 54px;
   max-width: 480px;
 
 }
@@ -272,6 +291,7 @@ body {
 .inner-header-title {
   padding: 35px 0 8px 70px;
   margin: 0;
+
 }
 
 .main-catalog-form {
@@ -286,10 +306,6 @@ body {
 .form-fieldset-answer {
   padding: 0 0 16px 0;
   margin: 0;
-}
-
-.form-fieldset {
-  margin: 0 0 20px 0;
 }
 
 .form-fieldset-answer-first {
@@ -313,7 +329,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  margin-top: 40px;
+  margin: 40px 0 20px 0;
 }
 
 .form-fieldset-cost {
@@ -353,23 +369,26 @@ h1 {
 
 .navigation {
   display: flex;
-  justify-content: space-around;
-  margin: 0 50px 0 0;
+  justify-content: space-between;
+  margin-right: 285px;
+  width: 1200px;
 }
 
 .navigation-list {
   display: flex;
-  width: 399px;
+  width: 450px;
+  margin: 0 auto;
+  padding: 0;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0 150px 0 0;
 }
 
 .navigation-user-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 74px;
+  width: 120px;
+  margin-right: 29px;
 }
 
 .main-footer {
@@ -377,14 +396,27 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding: 45px 70px 35px 80px;
+}
+
+.footer-social-item {
+  margin-right: 15px;
+}
+
+.footer-social-link {
+  display: flex;
+}
+
+.footer-html-place {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-social-list {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin: 0 0 0 30px;
-  width: 150px;
+  background-color: #ffffff;
+  margin: 0 auto;
 }
 
 .breadcrumbs-list {
@@ -437,10 +469,6 @@ h1 {
   padding: 23px;
 }
 
-.footer-html-place {
-  margin: 0 50px 0 0;
-}
-
 .navigation-want-link {
   font-style: normal;
   font-weight: 700;
@@ -453,6 +481,7 @@ h1 {
   text-transform: uppercase;
   border-radius: 4px;
   padding: 8px 50px 8px 50px;
+  margin-right: 70px;
 }
 
 .main-button {
@@ -463,15 +492,15 @@ h1 {
   line-height: 36px;
   text-align: center;
   color: #ffffff;
-
   background-color: #82B3D3;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .want-here-button {
-  margin: auto 0;
-  padding: 8px 50px 8px 50px;
+  display: flex;
+  margin: 0 auto;
+  width: 160px;
 }
 
 .main-button-found {
@@ -486,6 +515,7 @@ h1 {
   text-transform: uppercase;
   padding: 8px 50px;
   border-radius: 4px;
+  max-width: 170px;
 }
 
 .pagination-link {
@@ -516,6 +546,8 @@ h1 {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
+  width: 331px;
+  padding: 0;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -623,5 +655,5 @@ h1 {
 }
 
 .footer-phone {
-  margin: 45px 0 35px 0;
+
 }
