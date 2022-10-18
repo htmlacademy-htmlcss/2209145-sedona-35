@@ -117,7 +117,7 @@ html {
   line-height: 28px;
   text-transform: uppercase;
   padding: 0;
-  margin: 0 auto 30px;
+  margin: 0 auto 62px;
   max-width: 175px;
 }
 
@@ -126,9 +126,15 @@ html {
   height: 384px;
   display: flex;
   flex-direction: column;
-  padding: 103px 0 121px 0;
   font-size: 18px;
   line-height: 21px;
+  padding: 103px 0 121px 0;
+}
+
+.advantages-item-blue {
+  background: #82B3D3;
+  color: #ffffff;
+  padding: 92px 0 111px 0;
 }
 
 .advantages-item-svg {
@@ -183,7 +189,7 @@ html {
 
 .navigation-logo {
   display: flex;
-  margin: 0 28px 0 70px;
+  margin: 0 0 0 70px;
 }
 
 .main-description {
@@ -200,11 +206,6 @@ html {
 
 .advantages-item-icon {
   margin: 0 0 30px 0;
-}
-
-.advantages-item-blue {
-  background: #82B3D3;
-  color: #ffffff;
 }
 
 .advantages-item-white {
@@ -301,16 +302,22 @@ html {
 }
 
 .hotel-search-header {
+  display: flex;
+  justify-content: center;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px;
+  max-width: 300px;
 }
 
 .hotel-search-description {
-  margin: 0 0 54px 0;
+  margin: 0 auto 54px;
+  max-width: 600px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .email-form {
@@ -338,7 +345,7 @@ html {
 }
 
 .inner-header-title {
-  margin: 0;
+  margin: 0 0 8px;
 }
 
 .main-catalog-form {
@@ -397,6 +404,7 @@ html {
   line-height: 23px;
   margin: 0 70px 0 0;
   border: none;
+  padding: 0;
 }
 
 .form-fieldset:nth-child(2) {
@@ -508,21 +516,6 @@ h1 {
   border-bottom: 2px solid #756257;
 }
 
-.navigation-want-link {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #756157;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 4px;
-  padding: 8px 50px 8px 50px;
-  margin-right: 70px;
-}
-
 .main-button {
   font-style: normal;
   font-weight: 700;
@@ -538,11 +531,31 @@ h1 {
 
 .want-here-button {
   display: flex;
-  margin: 0 auto;
-  width: 160px;
+  justify-content: right;
+  margin: 0;
+  align-items: center;
+}
+
+.navigation-want-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 8px 34px;
+  margin-right: 70px;
+  max-width: 160px;
 }
 
 .main-button-found {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -552,9 +565,8 @@ h1 {
   background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 8px 50px;
   border-radius: 4px;
-  max-width: 170px;
+  max-width: 360px;
 }
 
 .pagination-link {
@@ -707,9 +719,10 @@ margin-right: 0;
   color: #ffffff;
   background-color: #82b3d3;
   text-align: center;
-  padding: 8px 50px 8px 50px;
+  padding: 8px 50px;
   border: none;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .reset-button {
@@ -717,9 +730,10 @@ margin-right: 0;
   color: #ffffff;
   background: transparent;
   text-align: center;
-  padding: 8px 50px 8px 50px;
+  padding: 8px 50px;
   border: none;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .footer-html-link {
