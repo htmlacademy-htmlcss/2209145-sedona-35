@@ -91,7 +91,7 @@ html {
 
 .navigation-user-list {
   display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
   align-items: center;
   width: 120px;
 }
@@ -103,7 +103,7 @@ html {
 .main-index-logo {
   display: flex;
   justify-content: center;
-  padding: 52px 374px 83px 371px;
+  min-height: 485px;
   background-color: #f2f2f2;
   color: #000000;
   background-image: url("../images/main-index/head-mask.svg"), url("../images/main-index/sedona-background.jpg");
@@ -116,25 +116,43 @@ html {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  padding: 0;
+  padding: 10px 0 0;
   margin: 0 auto 62px;
   max-width: 175px;
 }
 
-.advantages-item {
+.advantages-title-svg {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  padding: 10px 0 0;
+  margin: 0 auto 30px;
+  max-width: 175px;
+}
+
+.advantages-image-item {
+  display: flex;
   width: 400px;
-  height: 384px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advantages-item {
   display: flex;
   flex-direction: column;
+  width: 400px;
+  min-height: 384px;
+  justify-content: center;
   font-size: 18px;
   line-height: 21px;
-  padding: 103px 0 121px 0;
 }
 
 .advantages-item-blue {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
   background: #82B3D3;
   color: #ffffff;
-  padding: 92px 0 111px 0;
 }
 
 .advantages-item-svg {
@@ -150,12 +168,12 @@ html {
 .advantages-description-image {
   margin: 0;
   padding: 0;
-  vertical-align: bottom;
 }
 
 .advantages-description {
   margin: 0 auto;
   max-width: 230px;
+  padding: 0 0 10px;
 }
 
 .email-follow-background{
@@ -189,7 +207,6 @@ html {
 
 .navigation-logo {
   display: flex;
-  margin: 0 0 0 70px;
 }
 
 .main-description {
@@ -206,6 +223,7 @@ html {
 
 .advantages-item-icon {
   margin: 0 0 30px 0;
+  padding-top: 10px;
 }
 
 .advantages-item-white {
@@ -225,16 +243,6 @@ html {
 .hotel-catalog {
   padding: 57px 70px 47px 70px;
   background-color: #ffffff;
-}
-
-.hotels-stars {
-  display: block;
-  background-image: url("/images/catalog/hotel-star.svg");
-  padding: 8px 20px 8px 20px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 4px;
 }
 
 .hotel-number {
@@ -279,6 +287,12 @@ html {
   text-transform: uppercase;
 }
 
+.hotel-card-button-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
@@ -287,10 +301,6 @@ html {
 
 .hotel-card-image {
   margin-bottom: 16px;
-}
-
-.card-paragraph {
-  margin: 0 0 16px 0;
 }
 
 .main-header {
@@ -323,6 +333,11 @@ html {
 .email-form {
   display: flex;
   justify-content: center;
+}
+
+.mail-form {
+  width: 452px;
+  padding: 10px;
 }
 
 .email-header {
@@ -445,8 +460,7 @@ h1 {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
-  width: 1200px;
+  padding: 0 70px;
 }
 
 .navigation-list {
@@ -465,6 +479,10 @@ h1 {
 
 .footer-social-item {
   margin-right: 15px;
+}
+
+.footer-social-item:nth-last-child(1) {
+  margin: 0;
 }
 
 .footer-social-link {
@@ -502,9 +520,10 @@ h1 {
   align-items: center;
 }
 
-.card-paragraph {
+.card-hotel-price {
   display: flex;
   justify-content: space-between;
+  margin: 0 0 16px 0;
 }
 
 .pagination {
@@ -548,7 +567,6 @@ h1 {
   text-transform: uppercase;
   border-radius: 4px;
   padding: 8px 34px;
-  margin-right: 70px;
   max-width: 160px;
 }
 
@@ -621,11 +639,11 @@ margin-right: 8px;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
-  width: 331px;
   padding: 0;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  text-decoration: none;
 }
 
 .hotel-info-button {
@@ -640,6 +658,22 @@ margin-right: 8px;
   text-transform: uppercase;
 }
 
+.hotel-card-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotels-stars {
+  display: flex;
+  background-image: url("/images/catalog/hotel-star.svg");
+  background-repeat: repeat-x;
+  padding: 8px 20px 8px 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
 .buttons-hotel {
   padding: 8px 20px 8px 20px;
   min-width: 140px;
@@ -649,17 +683,17 @@ margin-right: 8px;
   border-radius: 4px;
 }
 
-.buttons-hotel:nth-child(odd) {
-  margin-right: 10px;
-}
-
 .sorting-item {
   display: flex;
   margin-right: 8px;
 }
 
 .button-sorting-item {
-  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
   border-radius: 4px;
 }
 
@@ -669,7 +703,6 @@ margin-right: 0;
 
 .button-all-card-item {
   border: 2px solid #000000;
-  border-radius: 4px;
 }
 
 .button-card {
