@@ -132,7 +132,7 @@ html {
 
 .advantages-image-item {
   display: flex;
-  width: 400px;
+  min-width: 400px;
   flex-direction: column;
   justify-content: center;
 }
@@ -156,8 +156,8 @@ html {
 }
 
 .advantages-item-svg {
-  width: 400px;
-  height: 384px;
+  min-width: 400px;
+  min-height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: center;
