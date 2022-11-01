@@ -357,6 +357,7 @@ html {
 
 .hotel-card-image {
   margin-bottom: 16px;
+  object-fit: cover;
 }
 
 .main-header {
