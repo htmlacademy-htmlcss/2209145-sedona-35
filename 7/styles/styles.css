@@ -260,7 +260,7 @@ html {
 
 .hotel-list {
   display: grid;
-  grid-template-columns: 340px 340px 340px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -393,9 +393,18 @@ html {
   justify-content: center;
 }
 
+
 .mail-form {
   width: 452px;
   padding: 10px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.mail-form-grey {
+  background: #f2f2f2;
 }
 
 .email-header {
@@ -414,7 +423,6 @@ html {
   line-height: 26px;
   margin: 0 auto 54px;
   max-width: 480px;
-
 }
 
 .inner-header-title {
@@ -529,7 +537,7 @@ h1 {
 
 .form-all-header {
   display: grid;
-  grid-template-columns: 151px 1fr 151px 2fr 288px 1fr 191px;
+  grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px;
 }
 
 .housing-type {
@@ -544,15 +552,16 @@ h1 {
 .form-fieldset {
   font-weight: 400;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 23px;
   border: none;
   padding: 0;
+  margin: 0;
 }
 
 .form-fieldset-cost {
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 23px;
   grid-column: 5/6;
   align-self: end;
 }
@@ -585,9 +594,11 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  border-radius: 4px;
   line-height: 36px;
   text-align: center;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 50px;
+  border: none;
   color: #ffffff;
   background-color: #82B3D3;
   text-decoration: none;
@@ -735,22 +746,25 @@ h1 {
   text-transform: uppercase;
 }
 
-.button {
-  border: none;
+.buttons-submit {
+margin: 0 0 32px 0;
 }
 
 .submit-button {
   color: #ffffff;
   background-color: #82b3d3;
   text-align: center;
-  padding: 8px 50px;
+  padding: 8px;
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  line-height: 20px;
 }
 
 .reset-button {
-  margin: 32px 0 20px 0;
   color: #ffffff;
   background: transparent;
   text-align: center;
@@ -758,6 +772,9 @@ h1 {
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .footer-html-link {
