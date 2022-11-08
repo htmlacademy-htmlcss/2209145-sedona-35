@@ -83,6 +83,18 @@ html {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  opacity: 50%;
+}
+
+.navigation-link:focus {
+  opacity: 50%;
+}
+
+.navigation-link:active {
+  opacity: 20%;
+}
+
 .navigation-link-svg-icon {
   padding: 20px 16px;
   display: flex;
