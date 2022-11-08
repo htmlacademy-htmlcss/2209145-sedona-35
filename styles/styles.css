@@ -46,9 +46,14 @@ html {
 }
 
 .page-header {
+  position: relative;
   color: #000000;
   background:#ffffff;
   font-size: 20px;
+}
+
+.page-header:focus {
+  outline: 2px solid #000000;
 }
 
 .navigation-item {
@@ -75,7 +80,6 @@ html {
   font-weight: 700;
   text-align: center;
   color: #000000;
-  background-color: #ffffff;
   text-decoration: none;
 }
 
@@ -220,7 +224,27 @@ input::placeholder {
 
 .navigation-logo {
   position: absolute;
-  left: 100px;
+  left: 70px;
+}
+
+.navigation-user-link {
+  position: relative;
+}
+
+.navigation-user-like {
+  font-size: 10px;
+  line-height: 10px;
+  background-color: #7db54f;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  position: absolute;
+  top: 8px;
+  right: 5px;
 }
 
 .buttons-hotel {
@@ -292,7 +316,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid #e6e6e6;
+  outline: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
@@ -492,6 +516,34 @@ input::placeholder {
   border: 3px solid rgba(255, 255, 255, 0);
 }
 
+.catalog-filter-label {
+  position: relative;
+}
+
+.cost-from {
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  right: 15px;
+  top: 28%;
+  color: #000000;
+  opacity: 30%;
+  font-style: inherit;
+  cursor: auto;
+}
+
+.cost-to {
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  right: 15px;
+  top: 28%;
+  color: #000000;
+  opacity: 30%;
+  font-style: inherit;
+  cursor: auto;
+}
+
 .range-min:hover {
   background: #e6e6e6;
   border-radius: 4px 0 0 4px;
@@ -499,14 +551,16 @@ input::placeholder {
 
 .range-min:focus {
   background: #e6e6e6;
-  border: 3px solid #83B3D3;
+  border: 3px solid #83b3d3;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .range-min:active {
   background: #f2f2f2;
   border: 3px solid #000000;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .range-max {
@@ -521,14 +575,16 @@ input::placeholder {
 
 .range-max:focus {
   background: #e6e6e6;
-  border: 3px solid #83B3D3;
+  border: 3px solid #83b3d3;
   border-radius: 0 4px 4px 0;
+  outline: none;
 }
 
 .range-max:active {
   background: #f2f2f2;
   border: 3px solid #000000;
   border-radius: 0 4px 4px 0;
+  outline: none;
 }
 
 .range-input {
@@ -629,7 +685,7 @@ h1 {
   display: flex;
   padding: 0;
   align-items: center;
-  max-width: 500px;
+  max-width: 520px;
   flex-wrap: wrap;
 }
 
@@ -647,22 +703,18 @@ h1 {
 
 .footer-social-link {
   display: flex;
+  color: #83b3d3;
 }
 
-.social-link-svg {
-  color: #82b3d3;
-}
-
-.footer-social-item:hover {
+.footer-social-link:hover {
   color: #68a2ca;
 }
 
-.footer-social-item:focus {
+.footer-social-link:focus {
   color: #68a2ca;
-  outline: none;
 }
 
-.footer-social-item:active {
+.footer-social-link:active {
   color: rgba(104, 162, 202, 0.3);
 }
 
@@ -763,6 +815,17 @@ h1 {
   max-width: 160px;
 }
 
+.down-arrow {
+  position: relative;
+}
+
+.down-arrow-stick {
+  position: absolute;
+  top: 25%;
+  right: 95px;
+  cursor: auto;
+}
+
 .select-control {
   position: relative;
   min-width: 292px;
@@ -796,7 +859,8 @@ h1 {
 
 .brown-interactive-button:focus {
   background-color: #615048;
-  outline: none;
+  outline: 2px solid #68a2ca;
+
 }
 
 .brown-interactive-button:active {
@@ -828,7 +892,7 @@ h1 {
 
 .blue-interactive-button:focus {
   background-color: #68a2ca;
-  outline: none;
+  outline: 2px solid #756157;
 }
 
 .blue-interactive-button:active {
@@ -855,7 +919,7 @@ h1 {
 
 .green-interactive-button:focus {
   background-color: #6c9e42;
-  outline: none;
+  outline: 2px solid #83b3d3;
 }
 
 .green-interactive-button:active {
@@ -941,7 +1005,6 @@ h1 {
 
 .phone-number:focus {
   color: #756157;
-  outline: none;
 }
 
 .phone-number:active {
@@ -1056,6 +1119,7 @@ h1 {
 
 .footer-html-link {
   margin: 49px 0 39px 0;
+  color: #000000;
 }
 
 .footer-html-link:hover {
@@ -1064,10 +1128,10 @@ h1 {
 
 .footer-html-link:focus {
   color: #756157;
-  outline: none;
 }
 
 .footer-html-link:active {
-  background: rgba(117, 97, 87, 0.3);
+  color: #756157;
+  opacity: 30%;
 }
 
