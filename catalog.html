@@ -56,9 +56,9 @@
       <ul class="breadcrumbs-list ul-list">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link breadcrumbs-link-arrow" href="index.html">
-            <svg class="breadcrumbs-home" width="13" height="13" viewBox="0 0 13 13"  fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" fill="white"/>
-              <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white"/>
+            <svg class="breadcrumbs-home" width="13" height="13" aria-hidden="true" focusable="false" viewBox="0 0 13 13"  fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" fill="currentColor"/>
+              <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="currentColor"/>
             </svg>
             <span class="visually-hidden">Главная</span>
           </a>
@@ -71,35 +71,57 @@
         <legend class="legend-title">
           Инфраструктура:
         </legend>
-        <p class="form-fieldset-answer">
-          <input class="infrastructure-checkbox" type="checkbox" name="infrastructure-pool" value="pool" id="pool-id" checked>
-          <label class="pool-id-connect" for="pool-id">Бассейн</label>
-        </p>
-        <p class="form-fieldset-answer">
-          <input class="infrastructure-checkbox" type="checkbox" name="infrastructure-parking" value="parking" id="parking-id" checked>
-          <label class="parking-id-connect" for="parking-id">Парковка</label>
-        </p>
-        <p class="form-fieldset-answer">
-          <input class="infrastructure-checkbox" type="checkbox" name="infrastructure-wi-fi" value="wi-fi" id="wi-fi-id">
-          <label class="wi-fi-id-connect" for="wi-fi-id">Wi-Fi</label>
-        </p>
+        <ul class="catalog-filter-list ul-list">
+          <li class="form-fieldset-answer">
+            <label class="control">
+              <input class="visually-hidden control-input" type="checkbox" name="infrastructure-pool" value="pool" id="pool-id" checked>
+              <span class="control-mark"></span>
+              <span class="control-label">Бассейн</span>
+            </label>
+          </li>
+          <li class="form-fieldset-answer">
+            <label class="control">
+              <input class="visually-hidden control-input" type="checkbox" name="infrastructure-parking" value="parking" id="parking-id" checked>
+              <span class="control-mark"></span>
+              <span class="control-label">Парковка</span>
+            </label>
+          </li>
+          <li class="form-fieldset-answer">
+            <label class="control">
+              <input class="visually-hidden control-input" type="checkbox" name="infrastructure-wi-fi" value="wi-fi" id="wi-fi-id">
+              <span class="control-mark"></span>
+              <span class="control-label">Wi-Fi</span>
+            </label>
+          </li>
+        </ul>
       </fieldset>
       <fieldset class="form-fieldset housing-type">
         <legend class="legend-title">
           Тип Жилья:
         </legend>
-        <p class="form-fieldset-answer">
-          <input class="housing-type-radio" type="radio" name="housing-type" value="hotel" id="hotel-id" checked>
-          <label class="hotel-id-connect" for="hotel-id">Гостиница</label>
-        </p>
-        <p class="form-fieldset-answer">
-          <input class="housing-type-radio" type="radio" name="housing-type" value="motel" id="motel-id">
-          <label class="motel-id-connect" for="motel-id">Мотель</label>
-        </p>
-        <p class="form-fieldset-answer">
-          <input class="housing-type-radio" type="radio" name="housing-type" value="apartment" id="apartment-id">
-          <label class="apartment-id-connect" for="apartment-id">Апартаменты</label>
-        </p>
+        <ul class="catalog-filter-list ul-list">
+          <li class="form-fieldset-answer">
+            <label class="control">
+              <input class="visually-hidden control-input-radio" type="radio" name="housing-type" value="hotel" id="hotel-id" checked>
+              <span class="control-mark-radio"></span>
+              <span class="control-label">Гостиница</span>
+            </label>
+          </li>
+          <li class="form-fieldset-answer">
+            <label class="control">
+              <input class="visually-hidden control-input-radio" type="radio" name="housing-type" value="motel" id="motel-id">
+              <span class="control-mark-radio"></span>
+              <span class="control-label">Мотель</span>
+            </label>
+          </li>
+          <li class="form-fieldset-answer">
+            <label class="control">
+              <input class="visually-hidden control-input-radio" type="radio" name="housing-type" value="apartment" id="apartment-id">
+              <span class="control-mark-radio"></span>
+              <span class="control-label">Апартаменты</span>
+            </label>
+          </li>
+        </ul>
       </fieldset>
       <fieldset class="form-fieldset-cost form-fieldset">
         <legend class="legend-title">
@@ -107,7 +129,7 @@
         </legend>
         <div class="output-cost">
           <label class="catalog-filter-label">
-            <input class="range-input range-min" type="text" value="0" name="min-price">
+            <input class="range-input range-min" type="number" value="0" name="min-price">
             <span class="cost-from">от</span>
           </label>
           <label class="catalog-filter-label">
@@ -115,31 +137,37 @@
             <input class="range-input range-max" type="text" value="9000" name="max-price">
           </label>
         </div>
+        <div class="range">
+          <div  class="range-scale">
+            <div class="range-bar" style="left: 0; width: 215px">
+              <button class="range-toggle toggle-min">
+              </button>
+              <button class="range-toggle toggle-max">
+              </button>
+            </div>
+          </div>
+        </div>
       </fieldset>
       <ul class="ul-list buttons-form">
-      <li class="buttons-submit">
-        <input type="submit" class="submit-button blue-interactive-button" value="Применить">
-      </li>
-      <li class="buttons-reset">
-        <input type="reset" class="reset-button" value="Сбросить">
-      </li>
+        <li class="buttons-submit">
+          <input type="submit" class="submit-button blue-interactive-button" value="Применить">
+        </li>
+        <li class="buttons-reset">
+          <input type="reset" class="reset-button" value="Сбросить">
+        </li>
       </ul>
     </form>
   </section>
   <section class="hotel-catalog">
     <section class="catalog-head">
       <h2 class="hotel-number">Найдено гостиниц: 38</h2>
-        <span class="down-arrow">
+      <div class="sorting-container">
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <span class="down-arrow-stick">
-            <svg width="13" height="7" viewBox="0 0 13 7" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.612492 0.344671C0.905385 0.0517776 1.38026 0.0517776 1.67315 0.344671L6.39282 5.06434L11.1125 0.34467C11.4054 0.0517767 11.8803 0.0517766 12.1732 0.34467C12.466 0.637563 12.466 1.11244 12.1732 1.40533L6.92315 6.65533C6.63026 6.94822 6.15539 6.94822 5.86249 6.65533L0.612492 1.40533C0.319599 1.11244 0.319599 0.637564 0.612492 0.344671Z" fill="black"/>
-</svg>
-          </span>
-        </span>
+          <span class="down-arrow-stick"></span>
+        </div>
       <ul class="sorting-list ul-list">
         <li class="sorting-item">
           <a class="button-sorting-item button-all-card" href="#">

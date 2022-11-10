@@ -102,8 +102,19 @@ html {
   font-weight: 700;
   text-align: center;
   color: #000000;
-  background-color: #ffffff;
   text-decoration: none;
+}
+
+.navigation-link-svg-icon:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-svg-icon:focus {
+  opacity: 0.6;
+}
+
+.navigation-link-svg-icon:active {
+  opacity: 0.3;
 }
 
 .navigation-user-list {
@@ -514,12 +525,87 @@ input::placeholder {
   background-position: center;
 }
 
-.form-fieldset-answer {
+.form-fieldset-answer:not(:last-child) {
   margin: 0 0 16px 0;
 }
 
 .output-cost {
   display: flex;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control:hover,
+.control-mark:hover {
+  opacity: 0.6;
+}
+
+.control:focus,
+.control-mark:focus {
+  opacity: 0.6;
+}
+
+.control:active,
+.control-mark:active {
+  opacity: 0.3;
+}
+
+.control-mark-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.control-input-radio[type="radio"]:checked + .control-mark-radio::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #3f5e72;
+  content: "";
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.control:disabled,
+.control-mark:disabled {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.control:focus-within {
+  opacity: 0.6;
+  border: 2px solid #ffffff;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  width: 12px;
+  height: 2px;
+  content: url("../images/catalog/ok-form.svg");
 }
 
 .range-min {
@@ -528,32 +614,75 @@ input::placeholder {
   border: 3px solid rgba(255, 255, 255, 0);
 }
 
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: #808080;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #dbb590;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
 .catalog-filter-label {
   position: relative;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .cost-from {
   position: absolute;
   font-size: 18px;
   line-height: 24px;
-  right: 15px;
-  top: 28%;
   color: #000000;
   opacity: 30%;
   font-style: inherit;
   cursor: auto;
+  right: 20px;
+  top: 15%;
 }
 
 .cost-to {
   position: absolute;
   font-size: 18px;
   line-height: 24px;
-  right: 15px;
-  top: 28%;
   color: #000000;
   opacity: 30%;
   font-style: inherit;
   cursor: auto;
+  right: 20px;
+  top: 15%;
 }
 
 .range-min:hover {
@@ -608,6 +737,7 @@ input::placeholder {
   font-family: inherit;
   background: #f2f2f2;
   border: 3px solid rgba(0,0,0,0);
+  margin-bottom: 45px;
 }
 
 .legend-title {
@@ -625,6 +755,7 @@ input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -833,15 +964,18 @@ h1 {
 
 .down-arrow-stick {
   position: absolute;
-  top: 25%;
+  top: 13px;
   right: 95px;
   cursor: auto;
 }
 
-.select-control {
+.sorting-container {
   position: relative;
+}
+
+.select-control {
   min-width: 292px;
-  padding: 14px 20px;
+  padding: 14px 40px 14px 20px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -850,6 +984,10 @@ h1 {
   border-radius: 4px;
   margin-right: 70px;
   appearance: none;
+  background-image: url("../images/catalog/select-down-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  cursor: pointer;
 }
 
 .select-control:hover {
@@ -872,11 +1010,59 @@ h1 {
 .brown-interactive-button:focus {
   background-color: #615048;
   outline: 2px solid #68a2ca;
-
 }
 
 .brown-interactive-button:active {
   color: rgba(255, 255, 255, 0.3)
+}
+
+.buttons-submit {
+  margin: 0 0 32px 0;
+}
+
+.submit-button {
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #82b3d3;
+  text-align: center;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.reset-button {
+  font-family: inherit;
+  color: #ffffff;
+  background: transparent;
+  text-align: center;
+  padding: 8px 57px;
+  border: 3px solid rgba(0,0,0,0);
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  color: rgba(255, 255, 255, 0.7) ;
+}
+
+.reset-button:focus {
+  border: 3px solid #82b3d3;
+  outline: none;
+}
+
+.reset-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0);
 }
 
 .main-button {
@@ -904,7 +1090,7 @@ h1 {
 
 .blue-interactive-button:focus {
   background-color: #68a2ca;
-  outline: 2px solid #756157;
+  outline: 2px solid #ff0000;
 }
 
 .blue-interactive-button:active {
@@ -1078,55 +1264,6 @@ h1 {
   background-color: #82b3d3;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.buttons-submit {
-  margin: 0 0 32px 0;
-}
-
-.submit-button {
-  font-family: inherit;
-  color: #ffffff;
-  background-color: #82b3d3;
-  text-align: center;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 16px;
-  width: 100%;
-  line-height: 20px;
-  cursor: pointer;
-}
-
-.reset-button {
-  font-family: inherit;
-  color: #ffffff;
-  background: transparent;
-  text-align: center;
-  padding: 8px 57px;
-  border: 3px solid rgba(0,0,0,0);
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  cursor: pointer;
-}
-
-.reset-button:hover {
-  color: rgba(255, 255, 255, 0.7) ;
-}
-
-.reset-button:focus {
-  border: 3px solid #82b3d3;
-  outline: none;
-}
-
-.reset-button:active {
-  color: rgba(255, 255, 255, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0);
 }
 
 .footer-html-link {
