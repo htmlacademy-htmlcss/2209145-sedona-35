@@ -138,6 +138,8 @@ html {
   background-position: center bottom, center;
   background-size: 100%, cover;
   background-repeat: no-repeat, no-repeat;
+  align-items: flex-start;
+  padding: 49px 0 0 0;
 }
 
 .advantages-title {
@@ -1408,7 +1410,7 @@ h1 {
   width: 16px;
   height: 15px;
   top: 50%;
-  right: 20px;
+  right: 22px;
   transform: translateY(-50%);
 }
 
@@ -1477,6 +1479,17 @@ h1 {
   background-color: #68a2ca;
 }
 
+.search-form-button:focus {
+  background-color: #68a2ca;
+  border: none;
+  outline: none;
+}
+
+.search-form-button:active {
+  background-color: #68a2ca;
+  opacity: 0.6;
+}
+
 .search-form-wrapper {
   margin: 0;
   padding: 0;
@@ -1502,10 +1515,6 @@ h1 {
   background-image: url("../images/popap/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.search-button-min:hover,
-.search-button-max:hover {
 }
 
 .quantity-adults {
@@ -1581,6 +1590,11 @@ h1 {
   margin-right: auto;
 }
 
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
 .search-short-wrapper {
   margin-right: -5px;
 }
@@ -1595,7 +1609,7 @@ h1 {
 }
 
 .modal-container-close {
-  display: none;
+  display: flex;
 }
 
 
