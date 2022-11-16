@@ -132,7 +132,7 @@ html {
   display: flex;
   justify-content: center;
   min-height: 485px;
-  background-color: #000000;
+  background-color: #2f4f4f;
   background-image: url("../images/main-index/head-mask.svg"), url("../images/main-index/sedona-background.jpg");
   background-position: center bottom, center;
   background-size: 100%, cover;
@@ -220,12 +220,6 @@ html {
   padding: 0 0 28px;
 }
 
-.email-follow-background{
-  background-image: url("../images/footer/main-email-background.jpg");
-  background-color: #ff6347;
-  color: #ffffff;
-}
-
 .email-follow {
   min-height: 415px;
   background-color: #ffffff;
@@ -233,6 +227,12 @@ html {
   background-repeat: no-repeat;
   text-align: center;
   padding: 96px 0;
+}
+
+.email-follow-background{
+  background-image: url("../images/footer/main-email-background.jpg");
+  background-color: #756157;
+  color: #ffffff;
 }
 
 .mail-form:placeholder-shown {
@@ -862,12 +862,7 @@ h1 {
   padding: 45px 70px 35px 80px;
 }
 
-.footer-social-item:not(:last-child) {
-  margin: 0 27px 0 0;
-}
-
 .footer-social-link {
-  display: flex;
   color: #83b3d3;
 }
 
@@ -889,12 +884,11 @@ h1 {
 }
 
 .footer-social-list {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   background-color: #ffffff;
-  margin: 0 auto;
   max-width: 160px;
-  flex-wrap: wrap;
 }
 
 .form-all-header {
