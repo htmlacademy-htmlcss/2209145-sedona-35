@@ -138,7 +138,7 @@ html {
   background-size: 100%, cover;
   background-repeat: no-repeat, no-repeat;
   align-items: flex-start;
-  padding: 49px 0 0 0;
+  padding: 51px 0 0 0;
 }
 
 .advantages-title {
@@ -536,10 +536,6 @@ html {
   max-width: 480px;
 }
 
-.inner-header-title {
-  margin: 0 0 8px;
-}
-
 .main-catalog-form {
   color: #ffffff;
   padding: 35px 70px 61px 70px;
@@ -822,7 +818,8 @@ html {
   content: none;
 }
 
-h1 {
+.inner-header-title {
+  margin: 0 0 8px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
