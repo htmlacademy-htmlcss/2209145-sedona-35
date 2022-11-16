@@ -132,8 +132,7 @@ html {
   display: flex;
   justify-content: center;
   min-height: 485px;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: #2f4f4f;
   background-image: url("../images/main-index/head-mask.svg"), url("../images/main-index/sedona-background.jpg");
   background-position: center bottom, center;
   background-size: 100%, cover;
@@ -224,7 +223,6 @@ html {
 .email-follow {
   min-height: 415px;
   background-color: #ffffff;
-  color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
@@ -233,13 +231,22 @@ html {
 
 .email-follow-background{
   background-image: url("../images/footer/main-email-background.jpg");
-  background-color: #000000;
+  background-color: #756157;
   color: #ffffff;
 }
 
-input::placeholder {
-  color: #000000;
-  opacity: 0.6;
+.mail-form:placeholder-shown {
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: 400;
+}
+
+.date-field:placeholder-shown {
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: 400;
 }
 
 .main-header {
@@ -360,7 +367,7 @@ input::placeholder {
 }
 
 .hotel-list::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -499,7 +506,6 @@ input::placeholder {
   justify-content: center;
 }
 
-
 .mail-form {
   width: 452px;
   padding: 14px 0 14px 20px;
@@ -508,9 +514,6 @@ input::placeholder {
   font-size: 18px;
   line-height: 24px;
   font-family: inherit;
-}
-
-.mail-form-grey {
   background: #f2f2f2;
 }
 
@@ -540,7 +543,7 @@ input::placeholder {
 .main-catalog-form {
   color: #ffffff;
   padding: 35px 70px 61px 70px;
-  background-color: #000000;
+  background-color: #756257;
   background-image: url("../images/catalog/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -559,7 +562,6 @@ input::placeholder {
   position: relative;
   display: block;
   padding-left: 36px;
-
 }
 
 .control:hover,
@@ -860,12 +862,7 @@ h1 {
   padding: 45px 70px 35px 80px;
 }
 
-.footer-social-item:not(:last-child) {
-  margin: 0 27px 0 0;
-}
-
 .footer-social-link {
-  display: flex;
   color: #83b3d3;
 }
 
@@ -887,10 +884,11 @@ h1 {
 }
 
 .footer-social-list {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   background-color: #ffffff;
-  margin: 0 auto;
+  max-width: 160px;
 }
 
 .form-all-header {
@@ -1143,17 +1141,15 @@ h1 {
   border-radius: 4px;
 }
 
-.green-interactive-button:hover {
-  background-color: #6c9e42;
-}
-
+.green-interactive-button:hover,
 .green-interactive-button:focus {
   background-color: #6c9e42;
   outline: 2px solid #83b3d3;
 }
 
 .green-interactive-button:active {
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #83b3d3;
 }
 
 .main-button-found {
@@ -1197,7 +1193,6 @@ h1 {
 }
 
 .pagination-ect {
-
   display: flex;
   padding-top: 4px;
   width: 60px;
@@ -1368,7 +1363,6 @@ h1 {
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
-
 }
 
 .modal-close-button:focus {
@@ -1404,7 +1398,7 @@ h1 {
 
 .calendar {
   position: absolute;
-  content: '';
+  content: "";
   background-image: url("../images/popap/calendar-icon.svg");
   background-repeat: no-repeat;
   width: 16px;
@@ -1578,7 +1572,7 @@ h1 {
 }
 
 .tooltip-text:after {
-  content:'';
+  content: "";
   background-image: url("../images/popap/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
@@ -1609,7 +1603,7 @@ h1 {
 }
 
 .modal-container-close {
-  display: flex;
+  display: none;
 }
 
 

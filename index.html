@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
   </head>
   <body>
     <header class="page-header">
-      <a class="navigation-logo" href="index.html">
+      <span class="navigation-logo">
         <img class="page-header-logo" src="images/header/navigation-logo.svg" alt="Логотип сайта." width="140" height="70">
-      </a>
+      </span>
       <nav class="navigation">
         <ul class="navigation-list ul-list">
           <li class="navigation-item">
@@ -78,7 +80,7 @@
             <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item advantages-item-blue">
-            <img class="advantages-description-image" src="images/advantages/nature-sedona.jpg" width="800" height="384" alt="Вид каньона Седоны.">
+            <img class="advantages-description-image" src="images/advantages/nature-sedona.jpg" width="800" height="384" alt="Вид на каньон Седоны.">
             <div class="advantages-image-item">
               <h3 class="advantages-title advantages-title-image">Там есть мост дьявола</h3>
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -133,12 +135,12 @@
         <p class="hotel-search-description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="main-button-found brown-interactive-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="email-follow email-follow-background">
+      <section class="email-follow-background email-follow">
         <h2 class="email-header">Подпишитесь на рассылку</h2>
         <p class="email-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form"  action="https://echo.htmlacademy.ru/" method="post">
           <label for="shown-email" class="visually-hidden">Введите ваш почтовый адрес.</label>
-          <input type="email" class="mail-form" id="shown-email" name="user-email" placeholder="Ваш e-mail" required>
+          <input class="mail-form" type="email" id="shown-email" name="user-email" placeholder="Ваш e-mail" required>
           <button class="main-button blue-interactive-button" type="submit">Подписаться</button>
         </form>
       </section>
